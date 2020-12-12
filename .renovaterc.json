@@ -1,0 +1,4 @@
+{
+  "extends": ["github>arhat-dev/renovate-presets:general"],
+  "enabledManagers": ["homebrew"]
+}
