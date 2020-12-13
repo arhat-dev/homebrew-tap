@@ -21,10 +21,17 @@ lint.shell:
 	${RUN_LINTER} koalaman/shellcheck-alpine:stable \
 		sh -c "find . | grep -E -e '.sh\$$' | grep -v build | xargs -I'{}' shellcheck -S warning -e SC1090 -e SC1091 {} ;"
 
+lint.ruby:
+	${RUN_LINTER} pipelinecomponents/rubocop:0.23.0 \
+		rubocop --extra-details --fix-layout . > /dev/null
+	${RUN_LINTER} pipelinecomponents/rubocop:0.23.0 \
+		rubocop --extra-details --parallel --display-style-guide .
+
 lint.yaml:
 	${RUN_LINTER} arhatdev/yamllint:latest yamllint -c .yaml-lint.yml .
 
 lint.all: \
 	lint.file \
 	lint.shell \
+	lint.ruby \
 	lint.yaml
