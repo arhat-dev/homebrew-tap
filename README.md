@@ -1,9 +1,15 @@
-# Template Repo
+# Homebrew Tap Repo
 
-[![CI](https://github.com/arhat-dev/template-repo/workflows/CI/badge.svg)](https://github.com/arhat-dev/template-repo/actions?query=workflow%3ACI)
-[![codecov](https://codecov.io/gh/arhat-dev/template-repo/branch/master/graph/badge.svg)](https://codecov.io/gh/arhat-dev/template-repo)
+[![CI](https://github.com/arhat-dev/homebrew-tap/workflows/CI/badge.svg)](https://github.com/arhat-dev/homebrew-tap/actions?query=workflow%3ACI)
+[![codecov](https://codecov.io/gh/arhat-dev/homebrew-tap/branch/master/graph/badge.svg)](https://codecov.io/gh/arhat-dev/homebrew-tap)
 
-Base template for more specific repo templates
+Homebrew tap repo for arhat-dev projects
+
+## Installation
+
+```bash
+brew install arhat-dev/tap/${project-name}
+```
 
 ## LICENSE
 
